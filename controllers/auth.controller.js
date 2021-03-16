@@ -65,9 +65,6 @@ module.exports.postSignIn = (req, res) => {
         });
 
         // Send request to Front-end to redirect to weather page
-        res.json({
-            code: 1,
-            message: "Sign in successful with Facebook",
-        });
+        res.redirect("/");
     }
 };
