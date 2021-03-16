@@ -53,7 +53,7 @@ module.exports.postSignIn = (req, res) => {
         let name = req.body.name;
         let profilePic = req.body.profilePic;
         let userData = {
-            name,
+            username: name,
             profilePic,
         };
 

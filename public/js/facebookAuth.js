@@ -30,6 +30,7 @@ function checkLoginState() {
 }
 function postDataToBackend() {
     FB.api("/me?fields=id,name,picture", function (response) {
+        console.log(response);
         fetch("/signin", {
             method: "POST",
             headers: {
