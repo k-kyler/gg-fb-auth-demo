@@ -61,6 +61,7 @@ function postDataToBackend() {
         })
             .then((response) => response.json())
             .then((result) => {
+                console.log(result);
                 if (result.code === 1) {
                     window.location.href = "/";
                 }
