@@ -62,6 +62,11 @@ function postDataToBackend() {
             }),
         })
             .then((response) => response.json())
+            .then((result) => {
+                if (result.code === 1) {
+                    window.location.href = "/";
+                }
+            })
             .catch((error) => console.log(error));
     });
 }
