@@ -13,7 +13,7 @@ html(lang="en")
         //- Content
         block content
 
-        if userData.type === "Google"
+        if userData.signInType === "Google"
             //- Sign out modal for Google
             #signOutModal.modal.fade(role='dialog')
                 .modal-dialog.modal-lg(role='content')
@@ -25,7 +25,7 @@ html(lang="en")
                             button(class="btn btn-danger", id="modalSignOutButton", onclick="onGoogleSignOut()") Sign out
                             button(class="btn btn-default ml-3", data-dismiss="modal") Close
 
-        if userData.type === "Facebook"
+        if userData.signInType === "Facebook"
             //- Sign out modal for Facebook
             #signOutModal.modal.fade(role='dialog')
                 .modal-dialog.modal-lg(role='content')
