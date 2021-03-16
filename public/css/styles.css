@@ -1,0 +1,25 @@
+body {
+    background-color: #f1f2f5;
+}
+
+.sign-in {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.weather {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+    width: 50%;
+    border-radius: 6px;
+}
+
+.weather img {
+    border-radius: 50px;
+}

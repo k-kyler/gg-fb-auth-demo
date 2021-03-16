@@ -1,0 +1,10 @@
+extends ./layout
+
+block content 
+    .container(class="sign-in")
+        form(class="d-flex align-items-center justify-content-center flex-column")
+            img.mb-3(src='/img/weather_logo.png', alt='Sign in', width="70", height="70")
+            h3.mb-4.font-weight-normal.text-center Weather App
+
+            div(scope="public_profile,email" onlogin="checkLoginState();" class="fb-login-button" data-width="" data-size="large" data-button-type="continue_with" data-layout="default" data-auto-logout-link="false" data-use-continue-as="false")
+            div(data-onsuccess="onGoogleSignIn", data-longtitle="true", class="mt-3 g-signin2")
