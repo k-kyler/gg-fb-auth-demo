@@ -30,7 +30,6 @@ function checkLoginState() {
 }
 function postDataToBackend() {
     FB.api("/me?fields=id,name,picture", function (response) {
-        console.log(response);
         fetch("/signin", {
             method: "POST",
             headers: {
@@ -39,7 +38,7 @@ function postDataToBackend() {
             body: JSON.stringify({
                 id: response.id,
                 name: response.name,
-                profilePic: response.picture.url,
+                profilePic: response.picture.data.url,
             }),
         })
             .then((response) => response.json())
