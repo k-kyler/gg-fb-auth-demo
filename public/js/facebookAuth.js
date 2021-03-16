@@ -1,3 +1,21 @@
+$(document).ready(() => {
+    // Show sign out modal
+    $("#facebookSignOutButton").click(() => {
+        $("#facebookSignOutModal").modal("toggle");
+    });
+
+    // Fetch request for user to sign out
+    $("#modalFacebookSignOutButton").click(() => {
+        fetch("/signout")
+            .then((response) => {
+                if (response.status === 200) {
+                    window.location.href = "/";
+                }
+            })
+            .catch((error) => console.error(error));
+    });
+});
+
 (function (d, s, id) {
     var js,
         fjs = d.getElementsByTagName(s)[0];

@@ -1,11 +1,11 @@
 $(document).ready(() => {
     // Show sign out modal
-    $("#signOutButton").click(() => {
-        $("#signOutModal").modal("toggle");
+    $("#googleSignOutButton").click(() => {
+        $("#googleSignOutModal").modal("toggle");
     });
 
     // Fetch request for user to sign out
-    $("#modalSignOutButton").click(() => {
+    $("#modalGoogleSignOutButton").click(() => {
         fetch("/signout")
             .then((response) => {
                 if (response.status === 200) {

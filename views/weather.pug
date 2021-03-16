@@ -7,7 +7,12 @@ block content
                 img(src=userData.profilePic, alt="user pic", width="30", height="30")
                 span(class="ml-2") #{userData.username}
 
-            button(id="signOutButton", class="btn btn-outline-danger") Sign out
+            if userData.signInType === "Google"
+                button(id="googleSignOutButton", class="btn btn-outline-danger") Sign out
+            
+            if userData.signInType === "Facebook"
+                button(id="facebookSignOutButton", class="btn btn-outline-danger") Sign out
+            
 
         div(class="mt-5")
             hr
