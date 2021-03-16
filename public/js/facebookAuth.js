@@ -43,7 +43,9 @@ window.fbAsyncInit = function () {
 
 function checkLoginState() {
     FB.getLoginStatus(function (response) {
-        console.log(response);
+        if (response.status === "connected") {
+            window.location.href = "/";
+        }
     });
 }
 function postDataToBackend() {
@@ -60,12 +62,6 @@ function postDataToBackend() {
             }),
         })
             .then((response) => response.json())
-            .then((result) => {
-                console.log(result);
-                if (result.code === 1) {
-                    window.location.href = "/";
-                }
-            })
             .catch((error) => console.log(error));
     });
 }
