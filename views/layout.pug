@@ -13,29 +13,29 @@ html(lang="en")
         //- Content
         block content
 
-        //- if userData.signInType === "Google"
-        //-     //- Sign out modal for Google
-        //-     #signOutModal.modal.fade(role='dialog')
-        //-         .modal-dialog.modal-lg(role='content')
-        //-             .modal-content
-        //-                 .modal-header
-        //-                     h4.modal-title Do you want to sign out?
-        //-                     button.close(type='close', data-dismiss='modal') &times;
-        //-                 .modal-body.d-flex.justify-content-end
-        //-                     button(class="btn btn-danger", id="modalSignOutButton", onclick="onGoogleSignOut()") Sign out
-        //-                     button(class="btn btn-default ml-3", data-dismiss="modal") Close
+        if userData.signInType === "Google"
+            //- Sign out modal for Google
+            #signOutModal.modal.fade(role='dialog')
+                .modal-dialog.modal-lg(role='content')
+                    .modal-content
+                        .modal-header
+                            h4.modal-title Do you want to sign out?
+                            button.close(type='close', data-dismiss='modal') &times;
+                        .modal-body.d-flex.justify-content-end
+                            button(class="btn btn-danger", id="modalSignOutButton", onclick="onGoogleSignOut()") Sign out
+                            button(class="btn btn-default ml-3", data-dismiss="modal") Close
 
-        //- if userData.signInType === "Facebook"
-        //- Sign out modal for Facebook
-        #signOutModal.modal.fade(role='dialog')
-            .modal-dialog.modal-lg(role='content')
-                .modal-content
-                    .modal-header
-                        h4.modal-title Do you want to sign out?
-                        button.close(type='close', data-dismiss='modal') &times;
-                    .modal-body.d-flex.justify-content-end
-                        button(class="btn btn-danger", id="modalSignOutButton", onclick="facebookSignOut()") Sign out
-                        button(class="btn btn-default ml-3", data-dismiss="modal") Close
+        if userData.signInType === "Facebook"
+            //- Sign out modal for Facebook
+            #signOutModal.modal.fade(role='dialog')
+                .modal-dialog.modal-lg(role='content')
+                    .modal-content
+                        .modal-header
+                            h4.modal-title Do you want to sign out?
+                            button.close(type='close', data-dismiss='modal') &times;
+                        .modal-body.d-flex.justify-content-end
+                            button(class="btn btn-danger", id="modalSignOutButton", onclick="facebookSignOut()") Sign out
+                            button(class="btn btn-default ml-3", data-dismiss="modal") Close
 
         script(src="https://apis.google.com/js/platform.js", async, defer)
         script(src="https://kit.fontawesome.com/a65ad4e019.js", crossorigin="anonymous")
