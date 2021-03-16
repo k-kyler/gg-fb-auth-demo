@@ -44,8 +44,7 @@ window.fbAsyncInit = function () {
 function checkLoginState() {
     FB.getLoginStatus(function (response) {
         if (response.status === "connected") {
-            // window.location.href = "/";
-            console.log(response);
+            window.location.href = "/";
         }
     });
 }
