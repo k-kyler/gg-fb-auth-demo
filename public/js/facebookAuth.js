@@ -56,3 +56,7 @@ function statusChangeCallback(response) {
         postDataToBackend();
     }
 }
+
+function facebookSignOut() {
+    FB.logout();
+}

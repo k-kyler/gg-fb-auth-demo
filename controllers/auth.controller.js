@@ -30,6 +30,7 @@ module.exports.postSignIn = (req, res) => {
             userData = {
                 username: payload.name,
                 profilePic: payload.picture,
+                signInType: "Google",
             };
         };
         googleVerifyHandler()
@@ -55,6 +56,7 @@ module.exports.postSignIn = (req, res) => {
         let userData = {
             username: name,
             profilePic,
+            signInType: "Facebook",
         };
 
         // If sign in success then generating user's cookie
